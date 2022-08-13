@@ -1,0 +1,143 @@
+import java.util.Scanner;
+public class MyClass {
+    public static void main(String args[]) {
+      Scanner scan = new Scanner(System.in);
+     
+
+      System.out.println("Man or Woman?");
+       String x = scan.nextLine();
+        char y = x.charAt(0);
+        
+        
+        // Calulating BMR 
+        if (y == 'M' || y == 'm')
+        {
+            System.out.println("Enter height in CM: ");
+            double height = scan.nextDouble();
+            System.out.println("Enter weight in lbs: ");
+            double weight = scan.nextDouble();
+            double kg = weight/2.2;
+            System.out.println("Enter your age please: ");
+            double age = scan.nextDouble();
+            
+            double bmr = (10*kg) + (6.25*height) -  (5 * age) + 5;
+             
+             System.out.println("On a scale of 1-5 how active are you? 1 being the lowest, 5 being the highest");
+        double activity = scan.nextDouble();
+        double TDEE = 1;
+
+        if ( activity == 1)
+        {
+            TDEE = 1.2;
+            
+        }
+        
+         else if ( activity == 2)
+        {
+            TDEE = 1.375;
+            
+
+        }
+        
+        else if ( activity == 3)
+        {
+            TDEE = 1.55;
+           
+
+        }
+        
+        else if ( activity == 4)
+        {
+            TDEE = 1.725;
+            
+
+        }
+        
+        else if ( activity == 5)
+        {
+            TDEE = 1.9;
+           
+
+        }
+        
+        double calorieintake = bmr * TDEE;
+        System.out.println("Maintenance calories: " + calorieintake);
+        System.out.println("Mild weight loss: " + calorieintake * 0.93);
+        System.out.println("Moderate Weight loss: " + calorieintake * 0.87);
+        System.out.println("Extreme Weight loss: " + calorieintake*0.73);
+            
+        }
+        
+        else if (y =='W' || y == 'w')
+        {
+           System.out.println("Enter height in CM: ");
+            double height = scan.nextDouble();
+            System.out.println("Enter weight in lbs: ");
+            double weight = scan.nextDouble();
+            double kg = weight/2.2;
+            System.out.println("Enter your age please: ");
+            double age = scan.nextDouble();
+            
+         double bmr = (10*kg) + (6.25*height) - (5 * age) - 161;
+             
+             System.out.println("On a scale of 1-5 how active are you? 1 being the lowest, 5 being the highest");
+        double activity = scan.nextDouble();
+        double TDEE = 1;
+
+        if ( activity == 1)
+        {
+            TDEE = 1.2;
+            
+        }
+        
+         else if ( activity == 2)
+        {
+            TDEE = 1.375;
+            
+
+        }
+        
+        else if ( activity == 3)
+        {
+            TDEE = 1.55;
+           
+
+        }
+        
+        else if ( activity == 4)
+        {
+            TDEE = 1.725;
+            
+
+        }
+        
+        else if ( activity == 5)
+        {
+            TDEE = 1.9;
+           
+
+        }
+        
+        
+        double calorieintake = bmr * TDEE;
+        System.out.println("Maintenance calories: " + calorieintake);
+        System.out.println("Mild weight loss: " + calorieintake * 0.93);
+        System.out.println("Moderate Weight loss: " + calorieintake * 0.87);
+        System.out.println("Extreme Weight loss: " + calorieintake*0.73);
+            
+
+        
+        
+        
+        }
+        else
+            System.out.println(" Enter a valid response please.");
+            
+        
+        
+
+        
+        
+      
+    }
+}
